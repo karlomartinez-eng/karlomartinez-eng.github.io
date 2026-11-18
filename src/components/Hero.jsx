@@ -7,7 +7,7 @@ export default function Hero({ theme }) {
     <section className="hero" id="top">
       <div className="wrap hero-grid reveal">
         <div className="hero-text">
-          <h1>I’m Karlo Joseph Martinez</h1>
+          <h1>I’m Karlo <span className="full-name">Joseph </span>Martinez</h1>
           <p className="role">Software Developer &amp; AI Automation Specialist</p>
           <p className="lead">
             Senior full stack developer with 10+ years building desktop, mobile, and backend systems for retail and
