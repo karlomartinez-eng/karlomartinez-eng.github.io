@@ -21,6 +21,23 @@ export default function App() {
     document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
 
+  // Fade + rise each .reveal element into view once, as it scrolls in.
+  useEffect(() => {
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            e.target.classList.add('on');
+            io.unobserve(e.target);
+          }
+        }
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -48px 0px' }
+    );
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
+
   return (
     <>
       <Nav theme={theme} setTheme={setTheme} />
@@ -31,7 +48,7 @@ export default function App() {
         <Contact />
       </main>
       <footer>
-        <div className="wrap">© 2026 Karlo Joseph C. Martinez. Bulacan, Philippines.</div>
+        <div className="wrap reveal">© 2026 Karlo Joseph C. Martinez. Bulacan, Philippines.</div>
       </footer>
     </>
   );

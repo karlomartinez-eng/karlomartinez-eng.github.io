@@ -79,7 +79,7 @@ export default function Contact() {
   return (
     <section id="contact">
       <div className="wrap contact-grid">
-        <div>
+        <div className="reveal">
           <span className="avail"><i></i>Available for freelance projects</span>
           <h2>Have a project in mind?</h2>
           <p className="sub">Tell me what you need built or automated. I reply to every message.</p>
@@ -103,7 +103,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <form onSubmit={submit}>
+        <form className="reveal" style={{ '--d': '150ms' }} onSubmit={submit}>
           <label>Your name
             <input required name="name" value={f.name} onChange={on('name')} maxLength={LIMITS.name} autoComplete="name" placeholder="Juan Dela Cruz" />
           </label>
