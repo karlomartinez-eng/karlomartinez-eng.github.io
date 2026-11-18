@@ -5,8 +5,8 @@ export default function Hero({ theme }) {
   const night = theme === 'dark';
   return (
     <section className="hero" id="top">
-      <div className="wrap hero-grid">
-        <div>
+      <div className="wrap hero-grid reveal">
+        <div className="hero-text">
           <h1>I’m Karlo Joseph Martinez</h1>
           <p className="role">Software Developer &amp; AI Automation Specialist</p>
           <p className="lead">

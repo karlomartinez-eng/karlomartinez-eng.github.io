@@ -4,15 +4,15 @@ export default function Stack() {
   return (
     <section id="stack">
       <div className="wrap">
-        <div className="head">
+        <div className="head reveal">
           <div>
             <h2>Tech stack</h2>
             <p className="sub">What I build with every day, plus what I’m learning now.</p>
           </div>
         </div>
         <div className="stack-grid">
-          {STACK.map((g) => (
-            <div className="group" style={{ '--gc': g.c }} key={g.t}>
+          {STACK.map((g, i) => (
+            <div className="group reveal" style={{ '--gc': g.c, '--d': `${i * 80}ms` }} key={g.t}>
               <h3>{g.t}</h3>
               <p>{g.d}</p>
               <div className="chips">
