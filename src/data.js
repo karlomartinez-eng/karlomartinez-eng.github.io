@@ -63,6 +63,7 @@ export const STACK = [
     ["Claude", "claude"],
     ["GitHub Copilot", "copilot"],
     ["Codex", "codex"],
+    ["Devin", "devin"],
     ],
   },
 ];
